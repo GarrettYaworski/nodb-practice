@@ -23,6 +23,17 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.car-container {
+  border: 1px solid black;
+  margin: 20px auto;
+  padding: 10px;
+  max-width: 30vw;
+}
+.car {
+  border: 1px solid black;
+  margin: 10px;
+  max-width: 100px;
+}
 
 .App-link {
   color: #61dafb;
