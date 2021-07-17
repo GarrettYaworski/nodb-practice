@@ -37,6 +37,9 @@ function deleteCar(req, res){
     const deleteIndex = cars.findIndex(car => car.id === deleteId)
     cars.splice(deleteIndex, 1);
 
+    // const updatedCars = cars.filter(car => car.id !== deleteId);
+    // cars = updatedCars;
+
     res.status(200).send(cars);
 }
 

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import AddCarForm from "./Components/addCarForm/AddCarForm";
+import CarList from "./Components/CarList/CarList";
 import './App.css'
 class App extends Component {
   constructor(){
@@ -42,18 +43,7 @@ class App extends Component {
   render(){
     return(
       <div>
-        {this.state.cars.map((car) => {
-          return (
-            <div className="car-container">
-              <div className="car">{car.name}</div>
-              <div>
-                <button onClick={() => this.handleDelete(car.id)}>DELETE ME</button>
-              </div>
-              <input onChange={this.updateCarNameState}/> 
-              <button onClick={() => this.updateCarRequest(car.id)}>change my name!</button>
-            </div>
-          )
-        })}
+        <CarList cars={this.state.cars} />
         {
           this.state.showAddForm ?
           <AddCarForm updateCars={this.updateCars}/> :
